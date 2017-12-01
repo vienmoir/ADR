@@ -1,5 +1,6 @@
 data = read.csv("астма2.csv", stringsAsFactors = FALSE)
 data$adr = ""
+
 for (i in 1:nrow(data)) {
   print(data$review[i])
   print("¬ведите 1, если в тексте упоминаютс€ побочные эффекты,")
@@ -9,8 +10,12 @@ for (i in 1:nrow(data)) {
   print("¬ведите 3, если перечисленные побочные эффекты не относ€тс€ к рассматриваемому препарату")
   print("¬ведите s, если устали и хотите прерватьс€:")
   n <- readline(prompt="»так:  ")
-  if (n == "s") break
+  if (n == "s") {
+    stop = i
+    break
+  }
   data$adr[i] = n
 }
 
 
+### stop - номер строки, где остановились
