@@ -1,10 +1,12 @@
-data = read.csv("антибиотики2.csv", stringsAsFactors = FALSE)
+data = read.csv("астма2.csv", stringsAsFactors = FALSE)
 data$adr = ""
 for (i in 1:nrow(data)) {
   print(data$review[i])
   print("¬ведите 1, если в тексте упоминаютс€ побочные эффекты,")
   print("¬ведите 0 в противном случае,")
   print("¬ведите -1, если не уверены,")
+  print("¬ведите 2, если побочные эффекты перечислены с упаковки")
+  print("¬ведите 3, если перечисленные побочные эффекты не относ€тс€ к рассматриваемому препарату")
   print("¬ведите s, если устали и хотите прерватьс€:")
   n <- readline(prompt="»так:  ")
   if (n == "s") break
