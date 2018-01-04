@@ -1,5 +1,5 @@
-data = read.csv("אסעלא2.csv", stringsAsFactors = FALSE)
-data$adr = ""
+#data = read.csv("D:/Uni/mas/ADR/dasha_asthma.csv", stringsAsFactors = FALSE)
+#data$adr = ""
 
 for (i in 1:nrow(data)) {
   print(data$review[i])
